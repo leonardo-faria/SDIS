@@ -10,7 +10,7 @@ public class MultiCasting extends TimerTask {
 	MulticastSocket ms;
 
 	public MultiCasting(String args[]) throws IOException {
-		buf = (args[0] + " " + InetAddress.getLocalHost().getHostName())
+		buf = (args[0] + " " + InetAddress.getLocalHost().getHostAddress())
 				.getBytes();
 		ms = new MulticastSocket(Integer.parseInt(args[2]));
 		ms.setTimeToLive(2);
