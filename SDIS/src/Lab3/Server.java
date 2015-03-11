@@ -30,13 +30,13 @@ public class Server {
 			}
 			String answer = null;
 			buf = new byte[512];
-			if (r[0].equals("LOOKUP") && r.length == 2) {
+			if (r[0].equals("lookup") && r.length == 2) {
 				System.out.println("R[1] " + r[1] + ";" + plates.size());
 				if (plates.get(r[1]) == null)
 					answer = "ERROR";
 				else
 					answer = plates.get(r[1]);
-			} else if (r[0].equals("REGISTER") && r.length == 3) {
+			} else if (r[0].equals("register") && r.length == 3) {
 				if (plates.get(r[1]) == null) {
 					plates.put(r[1], r[2]);
 					answer = "OK";

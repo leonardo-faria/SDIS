@@ -13,9 +13,9 @@ public class Client {
 
 		Socket socket = new Socket(args[0], Integer.parseInt(args[1]));
 		byte[] buf;
-		if (args[2].equals("LOOKUP"))
+		if (args[2].equals("lookup"))
 			buf = (args[2] + " " + args[3]).getBytes();
-		else if (args[2].equals("REGISTER"))
+		else if (args[2].equals("register"))
 			buf = (args[2] + " " + args[3] + " " + args[4]).getBytes();
 		else {
 			System.out.println("not valid");
